@@ -6,6 +6,7 @@ public class UserValidator {
     private static final String FIRST_NAME_PATTERN = "^[A-z]{1}[a-z]{2,}";
     private static final String LAST_NAME_PATTERN = "^[A-z]{1}[a-z]{2,}";
     private static final String EMAIL_PATTERN = "^[a-z]{2,}[.+][a-z]{2,}+@(bridgeLabz.co.)[a-z]{2,3}$";
+    private static final String MOBILE_NUM_PATTERN = "(0/91)?[7-9][0-9]{9}";
 
     public boolean validateFirstName(String fname) {
         Pattern pattern = Pattern.compile(FIRST_NAME_PATTERN);
@@ -21,4 +22,10 @@ public class UserValidator {
         Pattern pattern = Pattern.compile(EMAIL_PATTERN);
         return pattern.matcher(email).matches();
     }
+
+    public boolean validateMobileNumber(String num) {
+        Pattern pattern = Pattern.compile(MOBILE_NUM_PATTERN);
+        return pattern.matcher(num).matches();
+    }
+
 }
