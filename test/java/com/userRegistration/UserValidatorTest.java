@@ -28,4 +28,28 @@ public class UserValidatorTest {
         Assertions.assertEquals(true,result);
         System.out.println(result);
     }
+
+    @Test
+    public void givenLastName_WhenProper_ShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateLastName("Barkade");
+        Assertions.assertEquals(true,result);
+        System.out.println(result);
+    }
+
+    @Test
+    public void givenLastName_WhenShort_ShouldReturnFalse() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateLastName("Br");
+        Assertions.assertEquals(true,result);
+        System.out.println(result);
+    }
+
+    @Test
+    public void givenLastName_WhenSpChars_ShouldReturnFalse() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateLastName("Bar@Kade");
+        Assertions.assertEquals(true,result);
+        System.out.println(result);
+    }
 }
