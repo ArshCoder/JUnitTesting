@@ -68,4 +68,12 @@ public class UserValidatorTest {
         Assertions.assertEquals(true, result);
         System.out.println(result);
     }
+
+    @Test
+    public void givenPassword_WhenValid_ShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validatePassword("Password@1");
+        Assertions.assertEquals(true, result);
+        System.out.println(result);
+    }
 }
