@@ -52,4 +52,12 @@ public class UserValidatorTest {
         Assertions.assertEquals(true,result);
         System.out.println(result);
     }
+
+    @Test
+    public void givenEmail_WhenValid_ShouldReturnTrue() {
+        UserValidator validator = new UserValidator();
+        boolean result = validator.validateEmail("arshjeet.barkade@bridgeLabz.co.in");
+        Assertions.assertEquals(true,result);
+        System.out.println(result);
+    }
 }
