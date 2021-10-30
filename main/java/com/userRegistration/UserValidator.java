@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class UserValidator {
     private static final String FIRST_NAME_PATTERN = "^[A-z]{1}[a-z]{2,}";
     private static final String LAST_NAME_PATTERN = "^[A-z]{1}[a-z]{2,}";
-    private static final String EMAIL_PATTERN = "^[a-z]{2,}[.+][a-z]{2,}+@(bridgeLabz.co.)[a-z]{2,3}$";
+    private static final String EMAIL_PATTERN = "^[0-9a-zA-Z]{2,}[.+][0-9a-zA-Z]{2,}+@(bridgeLabz.co.)[a-z]{2,3}$";
     private static final String MOBILE_NUM_PATTERN = "(0/91)?[7-9][0-9]{9}";
     private static final String PASSWORD_PATTERN = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#&()–[{}]:;',?/*~$^+=<>]).{8,20}$";
 
@@ -33,4 +33,6 @@ public class UserValidator {
         Pattern pattern = Pattern.compile(PASSWORD_PATTERN);
         return pattern.matcher(pass).matches();
     }
+
+
 }
